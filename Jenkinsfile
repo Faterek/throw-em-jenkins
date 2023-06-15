@@ -8,6 +8,7 @@ pipeline {
                         source $BOT_CONFIG
                         sed -i "s/your_token/$BOT_TOKEN/" .env
                     '''
+                }
                 sh 'docker build -t faterek/throw-em .'
             }
         }
